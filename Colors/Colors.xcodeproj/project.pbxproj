@@ -106,10 +106,7 @@
 				5C7CD8EE266BC6BC00CFB3AF /* ViewModel */,
 				5C7CD8BE266BC5C600CFB3AF /* AppDelegate.swift */,
 				5C7CD8C0266BC5C600CFB3AF /* SceneDelegate.swift */,
-				5C7CD8C2266BC5C600CFB3AF /* ViewController.swift */,
-				5C7CD8C4266BC5C600CFB3AF /* Main.storyboard */,
 				5C7CD8C7266BC5C800CFB3AF /* Assets.xcassets */,
-				5C7CD8C9266BC5C800CFB3AF /* LaunchScreen.storyboard */,
 				5C7CD8CC266BC5C800CFB3AF /* Info.plist */,
 			);
 			path = Colors;
@@ -150,6 +147,8 @@
 		5C7CD8F0266BC6E300CFB3AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5C7CD8C4266BC5C600CFB3AF /* Main.storyboard */,
+				5C7CD8C9266BC5C800CFB3AF /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +156,7 @@
 		5C7CD8F1266BC6FE00CFB3AF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5C7CD8C2266BC5C600CFB3AF /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
