@@ -99,6 +99,11 @@
 		5C7CD8BD266BC5C600CFB3AF /* Colors */ = {
 			isa = PBXGroup;
 			children = (
+				5C7CD8F2266BC7E600CFB3AF /* APIService */,
+				5C7CD8F1266BC6FE00CFB3AF /* Controller */,
+				5C7CD8F0266BC6E300CFB3AF /* View */,
+				5C7CD8EF266BC6CF00CFB3AF /* Model */,
+				5C7CD8EE266BC6BC00CFB3AF /* ViewModel */,
 				5C7CD8BE266BC5C600CFB3AF /* AppDelegate.swift */,
 				5C7CD8C0266BC5C600CFB3AF /* SceneDelegate.swift */,
 				5C7CD8C2266BC5C600CFB3AF /* ViewController.swift */,
@@ -126,6 +131,41 @@
 				5C7CD8E2266BC5C800CFB3AF /* Info.plist */,
 			);
 			path = ColorsUITests;
+			sourceTree = "<group>";
+		};
+		5C7CD8EE266BC6BC00CFB3AF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5C7CD8EF266BC6CF00CFB3AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5C7CD8F0266BC6E300CFB3AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5C7CD8F1266BC6FE00CFB3AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5C7CD8F2266BC7E600CFB3AF /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APIService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
