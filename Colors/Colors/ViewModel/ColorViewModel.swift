@@ -20,7 +20,11 @@ class ColorViewModel: ObservableObject {
             print("got results")
             switch result{
             case .success(let data):
-                self.state = .fetched
+                guard let hexValue = data.hex else {
+                    self.state = .error(RequestError.failedToConvertData)
+                    return
+                }
+                self.state = .fetched(hexValue)
             case .failure(let error):
                 self.state = .error(error)
             }
@@ -32,7 +36,7 @@ extension ColorViewModel{
     enum State{
         case idle
         case fetching
-        case fetched
+        case fetched(HexValue)
         case error(Error)
         
     }

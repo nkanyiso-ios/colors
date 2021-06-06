@@ -8,10 +8,10 @@
 import Foundation
 
 struct ColorResponse: Codable{
-    var hex: hexValue?
+    var hex: HexValue?
 }
 
-struct hexValue: Codable {
+struct HexValue: Codable {
     var value: String
     var clean: String
 }
