@@ -16,10 +16,13 @@
 		5C7CD8D6266BC5C800CFB3AF /* ColorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD8D5266BC5C800CFB3AF /* ColorsTests.swift */; };
 		5C7CD8E1266BC5C800CFB3AF /* ColorsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD8E0266BC5C800CFB3AF /* ColorsUITests.swift */; };
 		5C7CD8F4266BD4CD00CFB3AF /* ColorApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD8F3266BD4CD00CFB3AF /* ColorApiService.swift */; };
-		5C7CD8F6266BDF9800CFB3AF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD8F5266BDF9800CFB3AF /* Constants.swift */; };
+		5C7CD8F6266BDF9800CFB3AF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD8F5266BDF9800CFB3AF /* Constant.swift */; };
 		5C7CD8F8266BE2CB00CFB3AF /* ColorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD8F7266BE2CB00CFB3AF /* ColorViewModel.swift */; };
 		5C7CD8FB266CF88100CFB3AF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD8FA266CF88000CFB3AF /* UIColor.swift */; };
 		5C7CD8FE266D082300CFB3AF /* ColorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD8FD266D082300CFB3AF /* ColorResponse.swift */; };
+		5C7CD900266D16A500CFB3AF /* ConstantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD8FF266D16A500CFB3AF /* ConstantTests.swift */; };
+		5C7CD902266D179600CFB3AF /* ColorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD901266D179600CFB3AF /* ColorViewModelTests.swift */; };
+		5C7CD904266D181200CFB3AF /* ColorApiServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CD903266D181200CFB3AF /* ColorApiServiceMock.swift */; };
 		7564F502B2998BF52980B274 /* Pods_Colors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D130D6E4D457ADBB13EF33EB /* Pods_Colors.framework */; };
 		871038B46F305A8236B0A32A /* Pods_Colors_ColorsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E7D8567D0CD47A242DD098 /* Pods_Colors_ColorsUITests.framework */; };
 		CDF3977D20A42B520E2140D6 /* Pods_ColorsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FE523FCE140F1D1F3B594A /* Pods_ColorsTests.framework */; };
@@ -61,10 +64,13 @@
 		5C7CD8E0266BC5C800CFB3AF /* ColorsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsUITests.swift; sourceTree = "<group>"; };
 		5C7CD8E2266BC5C800CFB3AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C7CD8F3266BD4CD00CFB3AF /* ColorApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorApiService.swift; sourceTree = "<group>"; };
-		5C7CD8F5266BDF9800CFB3AF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5C7CD8F5266BDF9800CFB3AF /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		5C7CD8F7266BE2CB00CFB3AF /* ColorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewModel.swift; sourceTree = "<group>"; };
 		5C7CD8FA266CF88000CFB3AF /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		5C7CD8FD266D082300CFB3AF /* ColorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorResponse.swift; sourceTree = "<group>"; };
+		5C7CD8FF266D16A500CFB3AF /* ConstantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantTests.swift; sourceTree = "<group>"; };
+		5C7CD901266D179600CFB3AF /* ColorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewModelTests.swift; sourceTree = "<group>"; };
+		5C7CD903266D181200CFB3AF /* ColorApiServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorApiServiceMock.swift; sourceTree = "<group>"; };
 		70DD298883EC5F88652BBDD8 /* Pods-ColorsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ColorsTests.debug.xcconfig"; path = "Target Support Files/Pods-ColorsTests/Pods-ColorsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		754BBF610BF51C03CB4EBE92 /* Pods-Colors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colors.release.xcconfig"; path = "Target Support Files/Pods-Colors/Pods-Colors.release.xcconfig"; sourceTree = "<group>"; };
 		D130D6E4D457ADBB13EF33EB /* Pods_Colors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Colors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,7 +142,7 @@
 				5C7CD8C0266BC5C600CFB3AF /* SceneDelegate.swift */,
 				5C7CD8C7266BC5C800CFB3AF /* Assets.xcassets */,
 				5C7CD8CC266BC5C800CFB3AF /* Info.plist */,
-				5C7CD8F5266BDF9800CFB3AF /* Constants.swift */,
+				5C7CD8F5266BDF9800CFB3AF /* Constant.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -146,6 +152,9 @@
 			children = (
 				5C7CD8D5266BC5C800CFB3AF /* ColorsTests.swift */,
 				5C7CD8D7266BC5C800CFB3AF /* Info.plist */,
+				5C7CD8FF266D16A500CFB3AF /* ConstantTests.swift */,
+				5C7CD901266D179600CFB3AF /* ColorViewModelTests.swift */,
+				5C7CD903266D181200CFB3AF /* ColorApiServiceMock.swift */,
 			);
 			path = ColorsTests;
 			sourceTree = "<group>";
@@ -469,7 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C7CD8F6266BDF9800CFB3AF /* Constants.swift in Sources */,
+				5C7CD8F6266BDF9800CFB3AF /* Constant.swift in Sources */,
 				5C7CD8FB266CF88100CFB3AF /* UIColor.swift in Sources */,
 				5C7CD8C3266BC5C600CFB3AF /* ViewController.swift in Sources */,
 				5C7CD8F8266BE2CB00CFB3AF /* ColorViewModel.swift in Sources */,
@@ -484,7 +493,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7CD904266D181200CFB3AF /* ColorApiServiceMock.swift in Sources */,
 				5C7CD8D6266BC5C800CFB3AF /* ColorsTests.swift in Sources */,
+				5C7CD902266D179600CFB3AF /* ColorViewModelTests.swift in Sources */,
+				5C7CD900266D16A500CFB3AF /* ConstantTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
