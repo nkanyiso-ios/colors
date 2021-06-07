@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ColorResponse: Codable{
+struct ColorResponse: Codable {
     var hex: HexValue?
 }
 
