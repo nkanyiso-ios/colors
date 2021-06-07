@@ -1,0 +1,12 @@
+/* 
+  Localized.strings
+  Colors
+
+  Created by Nkanyiso Hlela on 2021/06/07.
+  
+*/
+"The hex value : " = "The hex value : ";
+"Failed to pass returned data" = "Failed to pass returned data";
+"Failed no data was returned" = "Failed no data was returned";
+"Sorry seems there is a problem with the service" = "Sorry seems there is a problem with the service";
+"Colors" = "Colors";
