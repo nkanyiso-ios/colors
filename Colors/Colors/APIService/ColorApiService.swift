@@ -10,25 +10,15 @@ import Alamofire
 
 protocol ColorApiServiceProtocol {func convertRGBColorToHex(rgbColor: String , _ completion: @escaping (Result<ColorResponse, Error>) -> Void)}
 
-class ColorApiService: ColorApiServiceProtocol {
+class ColorApiService: BaseApiService, ColorApiServiceProtocol {
     
     func convertRGBColorToHex(rgbColor: String, _ completion: @escaping (Result<ColorResponse, Error>) -> Void) {
-        let url = Links.path + rgbColor;
-        AF.request(url, method: .get).response{ response in
-            switch (response.result) {
-            case .success:
-                if let data = response.data {
-                    let results = try? JSONDecoder().decode(ColorResponse.self, from: data)
-                    if let result = results { completion(.success(result)) }
-                    else { completion(.failure(RequestError.failedToConvertData)) }
-                }else{
-                    completion(.failure(RequestError.failedNoData))
-                }
-            case .failure( let error):
-                completion(.failure(error))
-                print(error)
-            }
-        }
+        let urlString = Links.path + rgbColor;
+        guard let url = URL(string: urlString) else { return }
+        let colorResource = Resource<ColorResponse>(url: url, httpVerb: HTTPMethod.get, parameters: [:],encoding: URLEncoding.default)
+        sendRequest(resource: colorResource,  { result in
+            completion(result)
+        })
     }
     
 }

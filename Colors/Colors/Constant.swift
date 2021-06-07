@@ -7,14 +7,14 @@
 
 import Foundation
 enum RequestError: Error {
-    case genericError
+    case invalidURL
     case failedNoData
     case failedToConvertData
     
     var localizedDescription: String? {
         switch self {
-        case .genericError:
-            return NSLocalizedString("General system errror please try again later", comment: "")
+        case .invalidURL:
+            return NSLocalizedString("Sorry seems there is a problem with the service", comment: "")
         case .failedNoData:
             return  NSLocalizedString("Failed no data was returned", comment: "")
         case .failedToConvertData:
