@@ -8,12 +8,12 @@
 import Foundation
 import Alamofire
 
-protocol ColorApiServiceProtocol {func convertRGBColorToHex(rgbColor:String , _ completion: @escaping (Result<ColorResponse, Error>) -> Void)}
+protocol ColorApiServiceProtocol {func convertRGBColorToHex(rgbColor: String , _ completion: @escaping (Result<ColorResponse, Error>) -> Void)}
 
 class ColorApiService: ColorApiServiceProtocol {
-    func convertRGBColorToHex(rgbColor:String, _ completion: @escaping (Result<ColorResponse, Error>) -> Void) {
+    
+    func convertRGBColorToHex(rgbColor: String, _ completion: @escaping (Result<ColorResponse, Error>) -> Void) {
         let url = Links.path + rgbColor;
-        print("Fetching = \(url)")
         AF.request(url, method: .get).response{ response in
             switch (response.result) {
             case .success:
@@ -24,11 +24,11 @@ class ColorApiService: ColorApiServiceProtocol {
                 }else{
                     completion(.failure(RequestError.failedNoData))
                 }
-                
             case .failure( let error):
                 completion(.failure(error))
                 print(error)
             }
         }
     }
+    
 }

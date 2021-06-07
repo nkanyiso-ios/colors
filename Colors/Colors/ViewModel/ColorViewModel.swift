@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 class ColorViewModel: ObservableObject {
     @Published var state = State.idle
