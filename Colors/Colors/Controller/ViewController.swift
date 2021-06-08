@@ -12,10 +12,7 @@ class ViewController: UIViewController {
     private lazy var viewModel = ColorViewModel(colorApiService: ColorApiService())
     private var cancellable: AnyCancellable?
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewDidLoad()
-        self.updateHexValue(hexString: "")
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
