@@ -15,19 +15,19 @@ class ColorViewModel: ObservableObject {
     init(colorApiService : ColorApiServiceProtocol) {
         self.colorApiService = colorApiService
     }
+    
     func getHexValue(rgbColor: String){
         state = .fetching
-        colorApiService.convertRGBColorToHex(rgbColor: rgbColor) { result in
-            print("got results")
-            switch result{
+        colorApiService.convertRGBColorToHex(rgbColor: rgbColor) {[weak self] result in
+            switch result {
             case .success(let data):
                 guard let hexValue = data.hex else {
-                    self.state = .error(RequestError.failedToConvertData)
+                    self?.state = .error(RequestError.failedToConvertData)
                     return
                 }
-                self.state = .fetched(hexValue)
+                self?.state = .fetched(hexValue)
             case .failure(let error):
-                self.state = .error(error)
+                self?.state = .error(error)
             }
         }
     }

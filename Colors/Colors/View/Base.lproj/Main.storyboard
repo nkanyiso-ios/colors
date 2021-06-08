@@ -18,14 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The hex value " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqt-eW-khX">
-                                <rect key="frame" x="152.5" y="442.5" width="109.5" height="21"/>
+                                <rect key="frame" x="152.5" y="392" width="109.5" height="122"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4w-6n-ooh">
-                                <rect key="frame" x="20" y="483.5" width="374" height="30"/>
+                                <rect key="frame" x="20" y="529" width="374" height="45"/>
                                 <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="W13-m9-dfw"/>
+                                </constraints>
                                 <state key="normal" title="Pick Color to convert">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -33,18 +36,30 @@
                                     <action selector="pickColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mJi-cp-eIr"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5u-eL-qSc">
+                                <rect key="frame" x="68" y="99" width="278" height="278"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="m5u-eL-qSc" secondAttribute="height" multiplier="1:1" id="D02-nZ-vBu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="m5u-eL-qSc" secondAttribute="trailing" constant="67" id="AlJ-hV-Sa7"/>
+                            <constraint firstItem="pqt-eW-khX" firstAttribute="top" secondItem="m5u-eL-qSc" secondAttribute="bottom" constant="15" id="PuA-13-63d"/>
+                            <constraint firstItem="m5u-eL-qSc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="Xpy-sa-2Ru"/>
                             <constraint firstItem="T4w-6n-ooh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bEg-3A-ktK"/>
-                            <constraint firstItem="T4w-6n-ooh" firstAttribute="top" secondItem="pqt-eW-khX" secondAttribute="bottom" constant="20" id="mCE-Jc-S1d"/>
+                            <constraint firstItem="m5u-eL-qSc" firstAttribute="top" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="fzY-XD-2pz"/>
+                            <constraint firstItem="T4w-6n-ooh" firstAttribute="top" secondItem="pqt-eW-khX" secondAttribute="bottom" constant="15" id="mCE-Jc-S1d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T4w-6n-ooh" secondAttribute="trailing" constant="20" id="pFI-a5-w3Z"/>
                             <constraint firstItem="pqt-eW-khX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sKt-Xg-PLh"/>
                             <constraint firstItem="pqt-eW-khX" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="tqU-Vd-oiy"/>
+                            <constraint firstItem="m5u-eL-qSc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vs3-ED-fI2"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorPreview" destination="m5u-eL-qSc" id="nNC-9Q-1Cc"/>
                         <outlet property="hexValueLabel" destination="pqt-eW-khX" id="5i2-RA-UKM"/>
                     </connections>
                 </viewController>
